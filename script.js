@@ -16,19 +16,38 @@ document.querySelectorAll(".project-image img").forEach(image => {
 });
 
 // Mobile Navigation
-menuBtn.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
+const setNavigationOpen = isOpen => {
+    navLinks.classList.toggle("active", isOpen);
+    menuBtn.setAttribute("aria-expanded", String(isOpen));
+    menuBtn.setAttribute(
+        "aria-label",
+        isOpen ? "Close navigation menu" : "Open navigation menu"
+    );
+    menuBtn.querySelector("span").textContent = isOpen ? "✕" : "☰";
+};
 
-    menuBtn.textContent =
-        navLinks.classList.contains("active") ? "✕" : "☰";
+menuBtn.addEventListener("click", () => {
+    setNavigationOpen(!navLinks.classList.contains("active"));
 });
 
 // Close menu after clicking a link
 document.querySelectorAll(".nav-links a").forEach(link => {
     link.addEventListener("click", () => {
-        navLinks.classList.remove("active");
-        menuBtn.textContent = "☰";
+        setNavigationOpen(false);
     });
+});
+
+document.addEventListener("keydown", event => {
+    if (event.key === "Escape" && navLinks.classList.contains("active")) {
+        setNavigationOpen(false);
+        menuBtn.focus();
+    }
+});
+
+window.addEventListener("resize", () => {
+    if (window.innerWidth > 900 && navLinks.classList.contains("active")) {
+        setNavigationOpen(false);
+    }
 });
 
 // Contact Form
