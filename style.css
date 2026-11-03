@@ -113,6 +113,27 @@ textarea:focus-visible {
     cursor: pointer;
 }
 
+.theme-btn {
+    display: grid;
+    place-items: center;
+    width: 42px;
+    height: 42px;
+    flex: 0 0 auto;
+    background: transparent;
+    border: 1px solid #263449;
+    border-radius: 7px;
+    color: var(--white);
+    font: inherit;
+    font-size: 21px;
+    cursor: pointer;
+    transition: color .2s, border-color .2s, background-color .2s;
+}
+
+.theme-btn:hover {
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
 .hero {
     max-width: 1150px;
     min-height: 650px;
@@ -311,6 +332,13 @@ textarea:focus {
 textarea {
     min-height: 130px;
     resize: vertical;
+}
+
+.form-status {
+    min-height: 1.5em;
+    color: var(--gray);
+    font-size: 12px;
+    line-height: 1.5;
 }
 
 form button {
@@ -1431,5 +1459,129 @@ footer p,
         animation-duration: .01ms !important;
         animation-iteration-count: 1 !important;
         transition-duration: .01ms !important;
+    }
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity .55s ease, transform .55s ease;
+}
+
+.reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+:root[data-theme="light"] {
+    color-scheme: light;
+    --background: #F3F6FA;
+    --card: #FFFFFF;
+    --primary: #176F9F;
+    --secondary: #A65313;
+    --white: #172436;
+    --gray: #526174;
+}
+
+:root[data-theme="light"] body {
+    background: var(--background);
+    color: var(--white);
+}
+
+:root[data-theme="light"] header {
+    background: rgba(243, 246, 250, .96);
+    border-bottom-color: #D7E0E9;
+}
+
+:root[data-theme="light"] .theme-btn,
+:root[data-theme="light"] .menu-btn {
+    color: var(--white);
+    border-color: #C5D1DE;
+}
+
+:root[data-theme="light"] .about-card,
+:root[data-theme="light"] .about-info,
+:root[data-theme="light"] .contact-info,
+:root[data-theme="light"] form {
+    background: var(--card);
+    border-color: #D7E0E9;
+}
+
+:root[data-theme="light"] .about-info div,
+:root[data-theme="light"] .section-heading-block,
+:root[data-theme="light"] .projects-heading,
+:root[data-theme="light"] .project-link,
+:root[data-theme="light"] .experience-endnote,
+:root[data-theme="light"] .journey-marker {
+    border-color: #D7E0E9;
+}
+
+:root[data-theme="light"] .skills-section .skill-card,
+:root[data-theme="light"] .experience-card {
+    background: linear-gradient(145deg, #FFFFFF, #EDF2F7);
+    border-color: #D7E0E9;
+}
+
+:root[data-theme="light"] .project-card {
+    background: #FFFFFF;
+    border-color: #D7E0E9;
+}
+
+:root[data-theme="light"] .project-card-featured {
+    background: linear-gradient(120deg, #EAF3FA, #FFFFFF);
+}
+
+:root[data-theme="light"] .project-image {
+    background:
+        radial-gradient(circle at 80% 20%, rgba(23, 111, 159, .12), transparent 35%),
+        linear-gradient(135deg, #E5EDF5, #F5F8FB);
+    border-color: #D7E0E9;
+}
+
+:root[data-theme="light"] .image-overlay-label {
+    background: rgba(255, 255, 255, .92);
+    border-color: rgba(23, 111, 159, .3);
+}
+
+:root[data-theme="light"] .skills-note {
+    background: #FFFFFF;
+    border-color: #D7E0E9;
+}
+
+:root[data-theme="light"] .skill-tags span,
+:root[data-theme="light"] .experience-tags span,
+:root[data-theme="light"] .project-tags span {
+    color: #285878;
+    background: rgba(23, 111, 159, .07);
+    border-color: rgba(23, 111, 159, .2);
+}
+
+:root[data-theme="light"] input,
+:root[data-theme="light"] textarea {
+    background: #F8FAFC;
+    border-color: #C5D1DE;
+    color: #172436;
+}
+
+:root[data-theme="light"] footer {
+    border-top-color: #D7E0E9;
+}
+
+@media (max-width: 900px) {
+    :root[data-theme="light"] .nav-links {
+        background: rgba(255, 255, 255, .98);
+        border-color: #D7E0E9;
+    }
+
+    :root[data-theme="light"] .nav-links a {
+        border-bottom-color: #D7E0E9;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
     }
 }

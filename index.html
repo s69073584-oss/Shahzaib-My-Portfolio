@@ -34,6 +34,13 @@
                 Download CV
             </a>
 
+            <button class="theme-btn" id="themeToggle" type="button"
+                    aria-label="Switch to light mode"
+                    aria-pressed="false"
+                    title="Switch to light mode">
+                <span aria-hidden="true">☼</span>
+            </button>
+
             <button class="menu-btn" id="menuBtn" type="button"
                     aria-label="Open navigation menu"
                     aria-controls="navLinks"
@@ -685,33 +692,52 @@
                 <input
                     type="text"
                     id="name"
+                    name="name"
                     placeholder="Your Name"
+                    aria-label="Your name"
+                    autocomplete="name"
+                    minlength="2"
+                    maxlength="100"
                     required
                 >
 
                 <input
                     type="email"
                     id="email"
+                    name="email"
                     placeholder="Your Email"
+                    aria-label="Your email"
+                    autocomplete="email"
+                    maxlength="254"
                     required
                 >
 
                 <input
                     type="text"
                     id="subject"
+                    name="subject"
                     placeholder="Subject"
+                    aria-label="Subject"
+                    minlength="2"
+                    maxlength="150"
                     required
                 >
 
                 <textarea
                     id="message"
+                    name="message"
                     placeholder="Your Message"
+                    aria-label="Your message"
+                    minlength="10"
+                    maxlength="5000"
                     required
                 ></textarea>
 
                 <button type="submit" class="btn primary">
                     Send Message
                 </button>
+
+                <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
 
             </form>
 
