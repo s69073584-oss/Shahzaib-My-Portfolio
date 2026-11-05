@@ -5,7 +5,7 @@ let project = null;
 if (projectSlug === "sentinel-kidz") {
 	project = {
 		name: "Sentinel Kidz",
-		number: "01 / 08",
+		number: "01 / 06",
 		image: "assets/projects/2.PNG",
 		alt: "Sentinel Kidz logo",
 		category: "PARENT-CONTROLLED WEBSITE",
@@ -25,7 +25,7 @@ if (projectSlug === "sentinel-kidz") {
 } else if (projectSlug === "jayak-hub") {
 	project = {
 		name: "Jayak Hub",
-		number: "02 / 08",
+		number: "05 / 06",
 		image: "assets/projects/3.PNG",
 		alt: "Jayak Hub logo",
 		category: "WEB PLATFORM",
@@ -45,7 +45,7 @@ if (projectSlug === "sentinel-kidz") {
 } else if (projectSlug === "roos-brothers") {
 	project = {
 		name: "Roos Brothers",
-		number: "03 / 08",
+		number: "06 / 06",
 		image: "assets/projects/4.PNG",
 		alt: "Roos Brothers logo",
 		category: "E-COMMERCE STORE",
@@ -65,7 +65,7 @@ if (projectSlug === "sentinel-kidz") {
 } else if (projectSlug === "albasync") {
 	project = {
 		name: "Albasync",
-		number: "04 / 08",
+		number: "02 / 06",
 		image: "assets/projects/Albasync.jpg",
 		alt: "Albasync property portal logo",
 		category: "REAL ESTATE / PROPERTY",
@@ -85,7 +85,7 @@ if (projectSlug === "sentinel-kidz") {
 } else if (projectSlug === "ultimate-learning") {
 	project = {
 		name: "Ultimate Learning",
-		number: "05 / 08",
+		number: "03 / 06",
 		image: "assets/projects/Ultimate-Learning.jpg",
 		alt: "Ultimate Learning logo",
 		category: "LEARNING MANAGEMENT SYSTEM",
@@ -105,7 +105,7 @@ if (projectSlug === "sentinel-kidz") {
 } else if (projectSlug === "altix") {
 	project = {
 		name: "Altix",
-		number: "06 / 08",
+		number: "04 / 06",
 		image: "assets/projects/Altix.jpg",
 		alt: "Altix token marketplace logo",
 		category: "TOKEN MARKETPLACE",
