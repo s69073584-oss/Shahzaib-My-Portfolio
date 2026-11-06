@@ -257,6 +257,12 @@ form {
     margin-bottom: 20px;
 }
 
+.contact-info a {
+    color: var(--primary);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
 .about-info div {
     padding: 13px 0;
     border-bottom: 1px solid #1E293B;
